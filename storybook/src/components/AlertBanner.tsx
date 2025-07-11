@@ -5,9 +5,15 @@ import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
 import WarningAmberOutlinedIcon from "@mui/icons-material/WarningAmberOutlined";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
+import CircleOutlinedIcon from "@mui/icons-material/CircleOutlined";
 import CloseIcon from "@mui/icons-material/Close";
 
-export type AlertSeverity = "error" | "warning" | "info" | "success";
+export type AlertSeverity =
+  | "error"
+  | "warning"
+  | "info"
+  | "success"
+  | "nothing";
 export type AlertVariant = "filled" | "outlined" | "standard";
 
 export interface AlertBannerProps {
@@ -107,6 +113,27 @@ const severityConfig = {
         background: "#EDF7ED",
         color: "#1E4620",
         iconColor: "#2E7D32",
+      },
+    },
+  },
+  nothing: {
+    icon: CircleOutlinedIcon,
+    colors: {
+      filled: {
+        background: "#FFFFFF",
+        color: "#000000",
+        iconColor: "#000000",
+      },
+      outlined: {
+        background: "#FFFFFF",
+        color: "#000000",
+        iconColor: "#000000",
+        border: "1px solid #E0E0E0",
+      },
+      standard: {
+        background: "#FFFFFF",
+        color: "#000000",
+        iconColor: "#000000",
       },
     },
   },
