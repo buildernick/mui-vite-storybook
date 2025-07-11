@@ -23,7 +23,7 @@ const meta: Meta<typeof AlertBanner> = {
   argTypes: {
     severity: {
       control: { type: "select" },
-      options: ["error", "warning", "info", "success"],
+      options: ["error", "warning", "info", "success", "nothing"],
       description: "The severity level of the alert",
     },
     variant: {
@@ -88,7 +88,13 @@ export const Playground: Story = {
 // All Severity Levels - Standard Variant
 export const AllSeverityLevelsStandard: Story = {
   render: () => {
-    const severities: AlertSeverity[] = ["success", "info", "warning", "error"];
+    const severities: AlertSeverity[] = [
+      "success",
+      "info",
+      "warning",
+      "error",
+      "nothing",
+    ];
 
     return (
       <Stack spacing={3} sx={{ width: "100%", maxWidth: 600 }}>
@@ -122,7 +128,13 @@ export const AllSeverityLevelsStandard: Story = {
 // All Severity Levels - Outlined Variant
 export const AllSeverityLevelsOutlined: Story = {
   render: () => {
-    const severities: AlertSeverity[] = ["success", "info", "warning", "error"];
+    const severities: AlertSeverity[] = [
+      "success",
+      "info",
+      "warning",
+      "error",
+      "nothing",
+    ];
 
     return (
       <Stack spacing={3} sx={{ width: "100%", maxWidth: 600 }}>
@@ -155,7 +167,13 @@ export const AllSeverityLevelsOutlined: Story = {
 // All Severity Levels - Filled Variant
 export const AllSeverityLevelsFilled: Story = {
   render: () => {
-    const severities: AlertSeverity[] = ["success", "info", "warning", "error"];
+    const severities: AlertSeverity[] = [
+      "success",
+      "info",
+      "warning",
+      "error",
+      "nothing",
+    ];
 
     return (
       <Stack spacing={3} sx={{ width: "100%", maxWidth: 600 }}>
@@ -189,7 +207,13 @@ export const AllSeverityLevelsFilled: Story = {
 // Complete Variant Matrix
 export const CompleteVariantMatrix: Story = {
   render: () => {
-    const severities: AlertSeverity[] = ["error", "warning", "info", "success"];
+    const severities: AlertSeverity[] = [
+      "error",
+      "warning",
+      "info",
+      "success",
+      "nothing",
+    ];
     const variants: AlertVariant[] = ["filled", "outlined", "standard"];
 
     return (
