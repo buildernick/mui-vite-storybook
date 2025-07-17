@@ -142,12 +142,15 @@ export default function AlertBanner({
   variant = "standard",
   title = "{Title}",
   description = "{Description}",
+  details,
   showTitle = true,
   showDescription = true,
+  showDetails = false,
   onClose,
   action,
   sx,
 }: AlertBannerProps) {
+  const [isExpanded, setIsExpanded] = React.useState(false);
   const IconComponent = severityIcons[severity];
 
   const getIconColor = () => {
