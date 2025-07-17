@@ -239,10 +239,10 @@ export const ComplexExample: Story = {
     title: "Action Required",
     description:
       "Your session will expire in 5 minutes. Please save your work.",
-    onClose: fn(),
+    onClose: () => console.log("Close clicked"),
     action: {
       label: "EXTEND SESSION",
-      onClick: fn(),
+      onClick: () => console.log("Extend session clicked"),
     },
   },
 };
