@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
 import AlertBanner from "../src/components/AlertBanner";
 
 const meta: Meta<typeof AlertBanner> = {
