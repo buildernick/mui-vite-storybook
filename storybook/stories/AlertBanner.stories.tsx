@@ -186,7 +186,7 @@ export const WithActionButton: Story = {
     description: "This Alert uses a Button component for its action.",
     action: {
       label: "UNDO",
-      onClick: fn(),
+      onClick: () => console.log("Action clicked"),
     },
   },
 };
