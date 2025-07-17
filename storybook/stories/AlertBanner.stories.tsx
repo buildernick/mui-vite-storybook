@@ -9,10 +9,11 @@ const meta: Meta<typeof AlertBanner> = {
     docs: {
       description: {
         component:
-          "Alert banners display important messages to users with different severity levels and variants.",
+          "Alert banners display important messages to users with different severity levels and variants. Supports expandable details for additional information.",
       },
     },
   },
+  tags: ["autodocs"],
   argTypes: {
     severity: {
       control: "select",
