@@ -17,8 +17,10 @@ export interface AlertBannerProps {
   variant?: AlertVariant;
   title?: string;
   description?: string;
+  details?: string;
   showTitle?: boolean;
   showDescription?: boolean;
+  showDetails?: boolean;
   onClose?: () => void;
   action?: {
     label: string;
