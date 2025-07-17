@@ -302,6 +302,34 @@ export const ComponentShowcase: Story = {
             />
           </Stack>
         </Box>
+
+        {/* Expandable Details */}
+        <Box>
+          <Typography variant="h5" sx={{ marginBottom: 3, fontWeight: 500 }}>
+            Expandable Details
+          </Typography>
+          <Stack spacing={2} sx={{ maxWidth: 600 }}>
+            <AlertBanner
+              severity="error"
+              title="System Error"
+              description="An unexpected error occurred while processing your request."
+              details="Stack trace: Error at line 42 in main.js\nCaused by: Network timeout after 30 seconds\nRequest ID: abc123\nTimestamp: 2024-01-15 14:30:25\nUser session: user_456789\n\nTo resolve this issue, please try refreshing the page or contact support if the problem persists."
+              showDetails={true}
+            />
+            <AlertBanner
+              severity="warning"
+              variant="filled"
+              title="Performance Notice"
+              description="Your current plan usage is approaching the monthly limit."
+              details="Current usage: 95% of monthly allocation\nRemaining requests: 127 out of 2,500\nBilling cycle resets: January 31, 2024\n\nConsider upgrading your plan to avoid service interruptions."
+              showDetails={true}
+              action={{
+                label: "UPGRADE",
+                onClick: () => console.log("Upgrade clicked"),
+              }}
+            />
+          </Stack>
+        </Box>
       </Stack>
     </Box>
   ),
