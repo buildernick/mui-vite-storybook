@@ -48,7 +48,7 @@ const meta: Meta<typeof AlertBanner> = {
     },
   },
   args: {
-    onClose: fn(),
+    onClose: () => console.log("Close clicked"),
   },
 };
 
