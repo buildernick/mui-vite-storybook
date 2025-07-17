@@ -243,6 +243,58 @@ export default function AlertBanner({
             {description}
           </Typography>
         )}
+
+        {details && showDetails && (
+          <Box sx={{ alignSelf: "stretch", marginTop: "8px" }}>
+            <Button
+              onClick={() => setIsExpanded(!isExpanded)}
+              variant="text"
+              size="small"
+              sx={{
+                color: getTextColor(),
+                padding: "0px",
+                marginBottom: "8px",
+                fontSize: "13px",
+                fontWeight: 500,
+                lineHeight: "20px",
+                letterSpacing: "0.46px",
+                textTransform: "none",
+                fontFamily: "Roboto, -apple-system, Helvetica, sans-serif",
+                minWidth: "auto",
+                justifyContent: "flex-start",
+                "&:hover": {
+                  backgroundColor: "transparent",
+                  textDecoration: "underline",
+                },
+              }}
+            >
+              {isExpanded ? "Hide Details" : "Show Details"}
+            </Button>
+
+            {isExpanded && (
+              <Typography
+                sx={{
+                  alignSelf: "stretch",
+                  color: getTextColor(),
+                  fontFeatureSettings: "'liga' off, 'clig' off",
+                  fontFamily: "Roboto, -apple-system, Helvetica, sans-serif",
+                  fontSize: "14px",
+                  fontStyle: "normal",
+                  fontWeight: 400,
+                  lineHeight: "143%",
+                  letterSpacing: variant === "filled" ? "0.15px" : "0.17px",
+                  maxHeight: "100px", // Roughly 5 lines at 20px line height
+                  overflow: "hidden",
+                  display: "-webkit-box",
+                  WebkitLineClamp: 5,
+                  WebkitBoxOrient: "vertical",
+                }}
+              >
+                {details}
+              </Typography>
+            )}
+          </Box>
+        )}
       </ContentContainer>
 
       {action && (
