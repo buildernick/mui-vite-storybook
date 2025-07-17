@@ -33,6 +33,11 @@ const meta: Meta<typeof AlertBanner> = {
       control: "text",
       description: "The description text of the alert",
     },
+    details: {
+      control: "text",
+      description:
+        "Additional detailed information (up to 5 lines when expanded)",
+    },
     showTitle: {
       control: "boolean",
       description: "Whether to show the title",
@@ -40,6 +45,10 @@ const meta: Meta<typeof AlertBanner> = {
     showDescription: {
       control: "boolean",
       description: "Whether to show the description",
+    },
+    showDetails: {
+      control: "boolean",
+      description: "Whether to show the details expansion functionality",
     },
     onClose: {
       description: "Callback fired when the close button is clicked",
