@@ -173,7 +173,7 @@ export const WithCloseButton: Story = {
     variant: "standard",
     title: "Warning",
     description: "This Alert displays the default close icon.",
-    onClose: fn(),
+    onClose: () => console.log("Close clicked"),
   },
 };
 
