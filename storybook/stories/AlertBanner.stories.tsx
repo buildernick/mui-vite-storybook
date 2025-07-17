@@ -276,3 +276,45 @@ export const ResponsiveWidth: Story = {
     },
   },
 };
+
+// Expandable details examples
+export const WithExpandableDetails: Story = {
+  args: {
+    severity: "error",
+    variant: "standard",
+    title: "System Error",
+    description: "An unexpected error occurred while processing your request.",
+    details:
+      "Stack trace: Error at line 42 in main.js\nCaused by: Network timeout after 30 seconds\nRequest ID: abc123\nTimestamp: 2024-01-15 14:30:25\nUser session: user_456789\n\nTo resolve this issue, please try refreshing the page or contact support if the problem persists.",
+    showDetails: true,
+  },
+};
+
+export const WithExpandableDetailsWarning: Story = {
+  args: {
+    severity: "warning",
+    variant: "standard",
+    title: "Performance Notice",
+    description: "Your current plan usage is approaching the monthly limit.",
+    details:
+      "Current usage: 95% of monthly allocation\nRemaining requests: 127 out of 2,500\nBilling cycle resets: January 31, 2024\n\nConsider upgrading your plan to avoid service interruptions. You can also optimize your API calls by implementing caching or reducing request frequency.",
+    showDetails: true,
+    action: {
+      label: "UPGRADE PLAN",
+      onClick: () => console.log("Upgrade plan clicked"),
+    },
+  },
+};
+
+export const WithExpandableDetailsInfo: Story = {
+  args: {
+    severity: "info",
+    variant: "filled",
+    title: "Maintenance Scheduled",
+    description: "System maintenance is scheduled for this weekend.",
+    details:
+      "Maintenance window: Saturday, January 20, 2024\nStart time: 11:00 PM PST\nExpected duration: 4 hours\nAffected services: API, Dashboard, Mobile App\n\nDuring this time, you may experience intermittent service interruptions. All data will be preserved and no action is required from your end.",
+    showDetails: true,
+    onClose: () => console.log("Close clicked"),
+  },
+};
